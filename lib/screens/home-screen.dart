@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Center(
             child: Text(
           'Chats',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
         )),
         actions: [
           IconButton(

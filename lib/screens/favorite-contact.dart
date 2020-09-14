@@ -1,4 +1,5 @@
 import 'package:chatapp/models/message_model.dart';
+import 'package:chatapp/screens/chats-screen.dart';
 import 'package:flutter/material.dart';
 
 class FavotiteContact extends StatefulWidget {
@@ -40,18 +41,23 @@ class _FavotiteContactState extends State<FavotiteContact> {
              scrollDirection: Axis.horizontal,
              itemCount: favorites.length,
              itemBuilder: (context, index) {
-             return Padding(
-               padding: const EdgeInsets.all(15.0),
-               child: Column(
-                 children: [
-                   CircleAvatar(
-                     backgroundImage: AssetImage(favorites[index].imageUrl),
-                   ),
-                   Text(
-                       favorites[index].name,
-                       style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.blueGrey),
-                   ),
-                 ],
+             return GestureDetector(
+               onTap: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => ChatScreen(user: favorites[index],),));
+               },
+               child: Padding(
+                 padding: const EdgeInsets.all(15.0),
+                 child: Column(
+                   children: [
+                     CircleAvatar(
+                       backgroundImage: AssetImage(favorites[index].imageUrl),
+                     ),
+                     Text(
+                         favorites[index].name,
+                         style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18,color: Colors.blueGrey),
+                     ),
+                   ],
+                 ),
                ),
              );
            },)

@@ -21,12 +21,12 @@ final User currentUser = User(
 );
 //frank
 final User frank = User(
-  id: 1,
+  id: 0,
   name: 'Frank',
   imageUrl: 'assets/images/frank.jpg',
 );
 final User socrate = User(
-  id: 2,
+  id: 0,
   name: 'Socrate',
   imageUrl: 'assets/images/socrate.jpg',
 );
@@ -64,7 +64,7 @@ List<Message> chats = [
     sender:liliane,
     time: '1:30 PM',
     text: 'anniversaire de sandra',
-    isLiked: true,
+    isLiked: false,
     unread: true,
 
   ),
@@ -72,7 +72,7 @@ List<Message> chats = [
     sender:socrate,
     time: '15:30 AM',
     text: 'Ouganda se porte bien',
-    isLiked: true,
+    isLiked: false,
     unread: false,
 
   ),
@@ -96,7 +96,7 @@ List<Message> chats = [
     sender:socrate,
     time: '15:30 AM',
     text: 'Ouganda se porte bien',
-    isLiked: true,
+    isLiked: false,
     unread: true,
 
   ),
